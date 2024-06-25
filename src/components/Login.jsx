@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
     const url = isLogin
       ? "https://dynamic-qr-server.vercel.app/login"
-      : "http://localhost:3000/reg";
+      : "https://dynamic-qr-server.vercel.app/reg";
     const payload = isLogin ? { username, pass } : { username, pass, name };
 
     axios
