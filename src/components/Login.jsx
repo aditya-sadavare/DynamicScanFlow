@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
     const url = isLogin
       ? "https://dynamic-qr-server.vercel.app/login"
-      : "https://dynamic-qr-server.vercel.app/reg";
+      : "http://localhost:3000/reg";
     const payload = isLogin ? { username, pass } : { username, pass, name };
 
     axios
@@ -32,6 +32,7 @@ const Login = () => {
         if (isLogin && res.data.msg === "Login successful") {
           navigate("/home");
         }
+
       })
       .catch((err) => toast.error(err));
   }
