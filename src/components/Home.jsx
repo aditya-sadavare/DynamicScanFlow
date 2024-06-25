@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/sidebackground.jpeg";
 import ModalComponent from "./ModalComponent";
 
-const Home = () => {
+const Home = ({fetchData}) => {
   const [token, setToken] = useState("");
   const navigate = useNavigate();
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -31,6 +31,7 @@ const Home = () => {
       .then((res) => {
         toast.info(res.data.msg);
         setUrl(`https://dynamic-qr-server.vercel.app/readqr/${res.data.uid}`);
+        fetchData()
       })
       .catch((err) => {
         toast.error(err.message);

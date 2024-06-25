@@ -85,7 +85,7 @@ const Sidebar = () => {
           open ? "md:blur-none blur-sm" : ""
         }`}
       >
-        <Home />
+        <Home fetchData={fetchData}/>
       </div>
 
       {/* Modal Component */}
