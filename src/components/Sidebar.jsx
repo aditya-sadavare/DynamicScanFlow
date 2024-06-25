@@ -9,7 +9,7 @@ import Cookies from "js-cookie";
 import ModalComponent from "./ModalComponent";
 
 const Sidebar = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [items, setItems] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
