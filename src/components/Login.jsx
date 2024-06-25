@@ -26,7 +26,7 @@ const Login = () => {
         Cookies.set("authorization", res.data.token, {
           sameSite: "strict",
 
-          // secure: true, // Uncomment for HTTPS environments
+          secure: true,
         });
 
         if (isLogin && res.data.msg === "Login successful") {
