@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <div
-      className="relative flex flex-col items-center justify-center min-h-screen"
+      className="relative flex flex-col items-center justify-center min-h-screen md:text-lg text-sm"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",

@@ -7,10 +7,10 @@ function SidebarItem({ items, open, openModal }) {
       {items.map((item, index) => (
         <div
           key={index}
-          className={`relative md:p-2 md:mb-3 mb-3 duration-300 ${open ? "" : "overflow-hidden"}`}
+          className={`cursor-pointer relative md:p-2 md:mb-3 mb-3 duration-300 ${open ? "" : "overflow-hidden"}`}
         >
           <li
-            className={`duration-300 flex items-center  text-white backdrop-blur-xl shadow-2xl ${open ? "w-100 h-[50px] rounded-full justify-start pl-4" : "md:w-20 md:h-20 w-10 h-10 rounded-full justify-center"}`}
+            className={`duration-300 flex items-center text-white backdrop-blur-xl shadow-2xl ${open ? "w-100 h-[50px] rounded-full justify-start pl-4" : "md:w-20 md:h-20 w-10 h-10 rounded-full justify-center"}`}
             onClick={() => openModal(item)}
           >
             <div className="flex items-center duration-300">
